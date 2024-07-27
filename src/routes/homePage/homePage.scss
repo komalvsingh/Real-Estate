@@ -1,0 +1,162 @@
+@import "../../responsive.scss";
+
+.homePage {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://www.compass.com/m/87745c0253dcffd59b7d402004ba87c85f6ec461_img_1/origin.jpg");
+  align-items: center;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      p {
+        color: white;
+      }
+
+      @include lg {
+        padding-right: 50px;
+      }
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 64px;
+        color: white;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .about {
+    width: 100%; /* Ensure full width */
+    padding: 50px 0; /* Adjust padding as needed */
+
+    h1 {
+      color: #0f2f03;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin-bottom: 20px; /* Space below heading */
+    }
+
+    .info1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: -20px; /* Adjust margin as needed */
+    }
+
+    .img1 img {
+      width: 100%; /* Adjust image width */
+      max-width: 400px; /* Maximum width for responsiveness */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: Add border radius */
+    }
+
+    .para {
+      margin-left: 20px;
+      padding: 10px;
+    }
+
+    .next {
+      font-size: 25px;
+      font-weight: bold; /* Use font-weight instead of font-style for bold */
+    }
+  }
+
+  .service {
+    text-align: center;
+    background-color: #e4eae2;
+    border-radius: 20px; /* Reduce border-radius for a softer look */
+    margin-top: 30px;
+    padding: 30px; /* Add padding for better spacing */
+
+    p {
+      padding: 10px;
+      font-weight: bold; /* Use font-weight instead of font-style for bold */
+      font-size: 20px;
+      text-decoration: underline;
+      text-decoration-color: #0f2f03;
+    }
+
+    li {
+      text-align: center;
+      padding: 10px 0; /* Adjust padding for list items */
+    }
+  }
+
+  .feat {
+    width: 100%; /* Ensure full width */
+    background-color: #d1eef0;
+    margin-top: 30px;
+    padding: 30px; /* Add padding for better spacing */
+    border-radius: 20px;
+
+    h2 {
+      text-align: center;
+      margin-top: 15px;
+      text-decoration: underline;
+      text-decoration-color: teal;
+    }
+
+    .pic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px; /* Adjust margin for better spacing */
+
+      .i img {
+        width: 100%; /* Adjust image width */
+        max-width: 300px; /* Maximum width for responsiveness */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: Add border radius */
+        transition: background-color 0.3s ease;
+      }
+
+      .i img:hover {
+        background-color: lightgray;
+      }
+    }
+  }
+}
